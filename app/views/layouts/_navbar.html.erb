@@ -1,0 +1,37 @@
+<div class="section">
+  <div class="container">
+    <div class="breadcrumb is-centered" aria-label="breadcrumbs">
+      <ul>
+        <%= render_breadcrumbs :tag => :li, :separator => "" %>
+      </ul>
+    </div>
+    <% unless devise_controller? %>
+      <% if current_user %>
+        <div class="card is-centered">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-96x96">
+                  <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-4"> <%= current_user.fullname %></p>
+                <p class="subtitle is-6"> <%= current_user.email %></p>
+              </div>
+              <div class="media-right">
+                <div class="field">
+                  <div class="control">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+            </div>
+          </div>
+        </div>
+        </div>
+      <% else %>
+      <% end %>
+    <%  end %>
+    </div>
