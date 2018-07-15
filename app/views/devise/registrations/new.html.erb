@@ -53,7 +53,27 @@
 
   <div class="field">
     <%= f.label :password_confirmation, :class => 'label' %>
-    <%= f.password_field :password_confirmation, autocomplete: "off", :class => "input" %>
+    <div class="control">
+      <%= f.password_field :password_confirmation, autocomplete: "off", :class => "input" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control">
+      <div class="file has-name is-fullwidth">
+        <label class="file-label">
+          <%= f.file_field :avatar, :class => 'file-input', :id => 'file-input' %>
+          <span class="file-cta">
+        <span class="file-icon">
+          <i class="fas fa-upload"></i>
+        </span>
+            <%= f.label :avatar, :class => 'file-label' %>
+      </span>
+          <span id="file-name" class="file-name">
+          </span>
+        </label>
+      </div>
+    </div>
   </div>
 
   <div class="field is-grouped">

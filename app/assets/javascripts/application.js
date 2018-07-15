@@ -13,4 +13,11 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require jquery2.min.js
 //= require_tree .
+
+$(document).ready(function() {
+    $('#file-input').change(function() {
+        $('#file-name').text($('#file-input').val());
+    });
+});

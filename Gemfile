@@ -2,10 +2,15 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.3.1'
+#Upload image
+gem 'carrierwave'
+#resize image
+gem 'mini_magick'
 #Devise
 gem "devise"
 #Bulma
 gem "bulma-rails", "~> 0.7.1"
+gem "jquery-rails"
 #Breadcrumb
 gem "breadcrumbs_on_rails"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -20,7 +25,6 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
-
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

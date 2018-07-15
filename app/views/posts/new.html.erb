@@ -1,0 +1,59 @@
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        New Post
+      </h1>
+      <h2 class="subtitle">
+        Again, aren't you tired of writing all those lines.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<%= form_for [current_user, @post] do |f| %>
+  <div class="field">
+    <%= f.label :title, :class => 'label' %>
+    <div class="control">
+      <%= f.text_field :title, :class => "input" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= f.label :lead, :class => 'label' %>
+    <div class="control">
+      <%= f.text_field :lead, :class => "input" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= f.label :content, :class => 'label' %>
+    <div class="control">
+      <%= f.text_area :content, :class => "textarea" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control">
+      <div class="file has-name is-fullwidth">
+        <label class="file-label">
+          <%= f.file_field :thumbnail, :class => 'file-input', :id => 'file-input' %>
+          <span class="file-cta">
+          <span class="file-icon">
+            <i class="fas fa-upload"></i>
+          </span>
+            <%= f.label :thumbnail, :class => 'file-label' %>
+        </span>
+          <span id="file-name" class="file-name">
+            </span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="field is-grouped">
+    <div class="control">
+      <%= f.submit "Submit", :class => 'button' %>
+    </div>
+  </div>
+<% end %>
