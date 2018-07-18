@@ -13,5 +13,8 @@
  *= require_tree .
  *= require_self
  */
-
 @import 'bulma.sass';
+
+.hero.is-second .hero-body {
+    padding-top:0;
+}

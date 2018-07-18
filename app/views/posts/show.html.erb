@@ -1,0 +1,23 @@
+<section class="hero is-second">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        <%= @post.title %>
+      </h1>
+      <h2 class="subtitle">
+        <%= @post.lead %> <br />
+        Par <%= link_to "@" + @user.fullname, user_path(@user.id) %>, le <%= @post.created %>
+      </h2>
+      <img src="<%= @post.thumbnail %>" alt="post photo" />
+      <div class="content">
+        <%= @post.content %>
+      </div>
+      <% if current_user == @post.user %>
+      <div>
+        <%= link_to "Delete", [current_user, @post], method: 'delete', :class => 'is-text button' %>
+        <%= link_to "Edit", edit_user_post_path(current_user, @post), :class => 'is-text button' %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</section>
